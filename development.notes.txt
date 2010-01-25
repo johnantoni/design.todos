@@ -1,0 +1,82 @@
+Directory Structure
+-------------------
+Break up directory structure:
+
+  /css/core
+      /pages
+      /themes
+      /lib/jquery/
+      /lib/jquery/plugins
+      /deployed/all.css
+               /*.minified
+
+  /js /core
+      /pages
+      /lib
+      /deployed/all.js
+               /*.minified
+
+
+Deployment
+----------
+Minify, Pack and Combine JavaScript code => all.js
+Do the same for the cascading style sheets => all.css
+
+Run tests on combined (deployed) and individual files (testing) in case either creates an error.
+Note, some libraries may not work when combined so test before-hand and note which ones these are.
+
+Fix-me's
+--------  
+Previously we used a method of writing "FIXME:" into the code like so:
+    
+  // FIXME: method needs to be more re-usable
+    
+This way we could note areas of the code that need looking at again, places for improvement & refactoring that we can quickly search for.
+
+SVN Commits
+-----------
+To make changes more documented, we structured SVN commit messages below so we could track what's been changed quicker and rollback precisely in-case an error occured.
+
+  [story xxx / task xxx] [minor / major] [comment] [reviewed by john smith]
+  ...[extended comments]
+  
+If a commit was too large and involved several sections of the app, then it was split up into individual parts; this way we could track changes and zero-in on the problem area without disabling other functionality.
+
+Image Optimisation
+------------------
+There are several Web Apps available (notably Smush.it) which allow you to losslessly compress JPG, PNG and GIF images further without losing any of their quality.
+
+One of the easiest command-line tool's to do this in one hit is Grosser's Smusher which simply requires the location of the images and will then compress them.
+
+  http://developer.yahoo.com/yslow/smushit/index.html
+  http://github.com/grosser/smusher
+
+You can usually get a further 20-30% loss in file size with such tools without any loss in quality.
+
+CSS Sprites
+-----------
+Another more involved technique you can do is use CSS Sprites, where you basically combine all the image's you use in one image or a collection of related ones; then use css to display a particular portion of it on a web element.
+
+Task Weighting
+--------------
+Previously the product owner would weight pending tasks based on importance
+
+Planning Numbers
+----------------
+Previously used two numbering systems to weight our tasks:
+
+  Ace = 1/2 hour
+  3   = 3 hours (half day)
+  5   = 5 hours
+  7   = full day
+  King  = two days
+  Jack  = something we couldn't weight, demanded further research or breaking apart
+
+We also used prime numbers to weight numbers (e.g. 3, 5, 7, 13) for hours / complexity of tasks.
+
+Previously used two online systems to track progress:
+  JIRA
+  AcuNote
+  ..AcuNote proved the most successful out of the two, JIRA was too large and unweildy for our needs
+  
+Tracked bugs with BugZilla, short-cut in AcuNote to inject bugs into the back-log
