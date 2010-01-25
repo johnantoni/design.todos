@@ -1,0 +1,222 @@
+'''Design Notes'''
+
+* Colour Keys / Print Palette
+* Font Sizes
+* Layout / Composition
+* Shading
+* Typography
+** Uniformity
+** Standardization
+* Corporate ID
+** Brand Identity
+* Clear Communication
+** Clarity
+** Appeal
+* SEO
+** Structure / Readability
+** Goals
+** Track
+*** Comments, Subscriptions, Account Activity
+*** Off-site Reviews
+** Tools
+*** Google Analytics
+*** WebTrends
+*** Zanox
+* Web Standards Project (WASP) : http://www.webstandards.org/
+
+'''Workflow'''
+
+* Wireframes
+* Design (PSD)
+* HTML / CSS / JS
+* Development
+* Testing
+* Live
+
+'''Accessibility'''
+
+* ACCESSKEY
+** useful for hot-linking portions of the page (header / footer)
+* TABINDEX
+** define tab order within a form
+* Design for Accessibility - DDA Compliant
+* Web Accessibility Evaluation (WAVE) : [http://wave.webaim.org/ http://wave.webaim.org/]
+
+'''Design for Flow'''
+
+* Clear Goals
+* Immediate Feedback
+* Efficiency
+* Relevance / Discovery
+* Design for Function
+** Less is More
+
+'''Experience'''
+
+* User-centred
+* Avoid using negative words, 
+
+* Appeal to what your customer wants
+** Market research
+** Social Marketing
+* Never use a warning when you mean “oops”, Undo or “Are you sure?”
+
+* Omit unnecessary words
+* Design pages for scanning, not reading
+* Street Signs & Breadcrumbs
+
+* Nested Hierarchy
+** Things that are related logically are also related visually
+** Things are “nested” visually to show what’s part of what
+* Remove the need for instructions
+* Understand your user base, their needs & wants
+* Plain English / design for the masses
+
+'''Typography'''
+
+* Choosing Type,
+** Write down what you want to convey and choose accordingly
+** Choose a Serif & Sans Serif font
+* Contrast
+* Whitespace
+* Minimalism
+* Uniform / Make it fit with the rest of the site
+* Maximise the effect by using complementary colours
+* Avoid using Impact fonts
+
+'''Available Platforms'''
+
+* NetBook
+* iPhone (320x480)
+* Android
+* CSS MEDIA=
+** ALL
+** BRAILLE
+** EMBOSSED
+** HANDHELD
+** PRINT
+** PROJECTION
+** SCREEN
+** SPEECH
+** TTY
+** TV
+
+'''Asset Directory Structure'''
+
+* JS
+** LIB
+*** JQUERY (CORE)
+*** PLUGINS (USED BY JQUERY)
+*** YUI
+** SRC
+*** CORE
+**** ''CORE JS SCRIPTS, E.G.''
+**** BASE.JS
+*** PAGES
+**** ''ONE FILE PER SECTION, E.G.''
+**** PRODUCTS.JS
+*** MIN
+**** ''MINIFIED + PACKED VERSIONS OF APPLICATION FILES (FOR DEPLOY), E.G.''
+**** PRODUCTS.MIN.JS
+* CSS
+** LIB
+*** YUI
+**** ''CSS FILES SPECIFIC TO YAHOO LIBRARIES''
+** SRC
+*** CORE
+*** PAGES
+*** MIN
+* IMAGES
+** ''EACH GROUP OF ASSETS (BUTTONS, ETC.) IN SEPARATE DIRECTORIES, NO IMAGES IN ROOT''
+** ''SYMBOLIC NAMING STRUCTURE''
+
+'''HTML5 '''
+
+* Elements
+** SECTION
+** ARTICLE
+** FOOTER
+** AUDIO
+** VIDEO
+** PROGRESS
+** NAV
+** METER
+** TIME
+** ASIDE
+* Growing support but still limited on the major browsers, stronger with FF3.6 Chrome2, Safari4, less with IE8
+* Support for some elements in IE8 can be injected until full support is available
+** http://remysharp.com/2009/01/07/html5-enabling-script/
+** [http://www.modernizr.com/ http://www.modernizr.com/]
+
+'''JavaScript'''
+
+* Re-usable components, plug-ins of our own, extensible components
+* Some plug-ins not used, some out-dated, regression testing
+* AJAX - code mock responses
+* Make CSS / JS clear & concise to read from a non-technical perspective, easy to understand what's going on
+* Apply METATAG’s to elements to mix in functionality, like the jQuery Validation & MetaTag plug-in’s
+
+'''Non-JavaScript Version'''
+
+* What happens to the page when JavaScript isn’t available?
+** Gracefully degrade?
+*** Tab Bar – hidden inner sections appear visible
+*** Menu Bar – Changes on Page Refresh
+*** Forms – Validation only at Server-Side
+* Firefox => Tools / Options / Content “Enable JavaScript”
+
+'''JavaScript Framework '''
+
+* Class layout
+* Scoping
+* Logically structured
+* Intelligent code
+
+'''Enhancements'''
+
+* Load JavaScript progressively, don’t keep the user waiting (preloading)
+* Library framework (reusable, extensible)
+* Smush images (Yahoo Smush.it web-service) to losslessly reduce asset load on server
+* Common components
+* Test Suite (IE6/IE7/IE8 FF2/FF3/FF3.5 SAFARI4 CHROME2)
+** Via Virtual Machines
+** Or Spoon.net web service
+* CSS Reset
+* Sitemap
+* Sliding Doors technique for buttons & corners (more cross-browser compliant till CSS3)
+** DIV -> H3 -> P
+* Image Sprites where possible for less asset load
+** Basically combine a number of images into one, best example: Amazon.com
+** Set as the background of a DIV element and use background-image-position to manipulate what portion of the image is shown
+* CDN for asset serving, probably no need with our current user base but worth thinking about for the future
+
+'''Coding'''
+
+* Find long running complex areas and either,
+** Break them apart
+** or Reduce their complexity
+
+'''SVN Ignore'''
+
+* desktop.ini
+* thumbs.db
+* .project
+* .DS_Store
+* <nowiki>*.bak</nowiki>
+* <nowiki>*.log</nowiki>
+* <nowiki>*.tmp</nowiki>
+* <nowiki>*.temp</nowiki>
+* <nowiki>*.cache</nowiki>
+
+'''SVN'''
+
+* Branches to freeze code
+* Tags for big changes
+* Always update before commit
+
+'''SVN Comments Template'''
+
+* <nowiki>[task 44] [minor / major] [comment] [follow up] [url to bug]</nowiki>
+** url links to bug tracking software / web-app (BugZilla, JIRA, Acunote)
+
+
